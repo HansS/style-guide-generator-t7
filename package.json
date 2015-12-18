@@ -1,0 +1,32 @@
+{
+  "name": "sistem",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "0.26.3",
+    "react": "0.14.3",
+    "react-dom": "0.14.3"
+  },
+  "devDependencies": {
+    "babel-cli": "6.3.17",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "rimraf": "2.4.4"
+  },
+  "scripts": {
+    "precompile": "rimraf lib",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t7/sistem-utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t7/sistem-utils/issues"
+  },
+  "homepage": "https://github.com/t7/sistem-utils#readme"
+}
