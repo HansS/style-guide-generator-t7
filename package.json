@@ -1,6 +1,6 @@
 {
   "name": "sistem",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t7/sistem-utils.git"
+    "url": "git+https://github.com/t7/sistem.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/t7/sistem-utils/issues"
+    "url": "https://github.com/t7/sistem/issues"
   },
-  "homepage": "https://github.com/t7/sistem-utils#readme"
+  "homepage": "https://github.com/t7/sistem#readme"
 }

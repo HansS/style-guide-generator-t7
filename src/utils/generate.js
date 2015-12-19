@@ -1,24 +1,13 @@
 import * as fs from 'fs-extra'
-import * as path from 'path'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
-import configure from './configure'
+import getSistemrc from './getSistemrc'
 
-export default function generate (page, name) {
-  const configPath = process.cwd() + '/.sistemrc'
-
-  if (!fs.existsSync(configPath)) {
-    console.log('Could not find .systemrc at', configPath)
-    console.log('Creating new .systemrc...')
-    const defaultConfig = configure()
-    fs.outputFileSync(configPath, defaultConfig)
-    console.log('.systmrc created:', configPath)
-  }
-
-  const config = require(configPath)
-  const Page = React.createElement(page, config)
-  const html = '<!doctype html>' + ReactDOMServer.renderToStaticMarkup(Page)
-
+export default function generate (options) {
+  const view = options.view
+  const name = options.name
+  const sistemrc = getSistemrc()
+  const View = React.createElement(view, JSON.stringify(sistemrc, null, 2))
+  const html = '<!doctype html>' + ReactDOMServer.renderToStaticMarkup(View)
   fs.outputFileSync(process.cwd() + '/sistem/' + name + '.html', html)
-
 }
