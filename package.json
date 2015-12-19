@@ -1,6 +1,6 @@
 {
   "name": "sistem",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -17,7 +17,10 @@
   "scripts": {
     "precompile": "rimraf lib",
     "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "src": "babel-node ./src/utils/getSistemrc",
+    "prelib": "npm run compile",
+    "lib": "node ./lib/utils/getSistemrc"
   },
   "repository": {
     "type": "git",
