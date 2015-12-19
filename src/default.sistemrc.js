@@ -1,4 +1,7 @@
 module.exports = {
-  branding: {},
+  branding: {
+    colors: [],
+    typography: []
+  },
   patterns: {}
 }
